@@ -164,3 +164,5 @@ CONFIGURE_ARGS="with-libvirt-include=/usr/include/libvirt with-libvirt-lib=/usr/
 #ln -s ~/Insync/admin@betark.ru/OneDrive/.ssh ~/
 #chmod 600 ~/.ssh/*
 #ln -s /home/artem/projects/ssh_config /home/artem/.ssh/config.d
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.syntevo.SmartGit -y
