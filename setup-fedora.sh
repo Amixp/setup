@@ -166,3 +166,6 @@ CONFIGURE_ARGS="with-libvirt-include=/usr/include/libvirt with-libvirt-lib=/usr/
 #ln -s /home/artem/projects/ssh_config /home/artem/.ssh/config.d
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.syntevo.SmartGit -y
+
+# Install Extension Manager
+#https://beta.flathub.org/ru/apps/details/com.mattjakeman.ExtensionManager
