@@ -166,3 +166,11 @@ CONFIGURE_ARGS="with-libvirt-include=/usr/include/libvirt with-libvirt-lib=/usr/
 #ln -s /home/artem/projects/ssh_config /home/artem/.ssh/config.d
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.syntevo.SmartGit -y
+
+#https://copr.fedorainfracloud.org/coprs/surfernsk/Personal_repos/
+dnf copr enable surfernsk/Personal_repos -y
+dnf install yandex-disk-indicator -y
+
+dnf -y install https://extras.getpagespeed.com/release-latest.rpm
+dnf -y yum-utils
+yum-config-manager --enable getpagespeed-extras-varnish60
