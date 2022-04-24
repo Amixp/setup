@@ -167,7 +167,6 @@ CONFIGURE_ARGS="with-libvirt-include=/usr/include/libvirt with-libvirt-lib=/usr/
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.syntevo.SmartGit -y
 
-<<<<<<< HEAD
 #https://copr.fedorainfracloud.org/coprs/surfernsk/Personal_repos/
 dnf copr enable surfernsk/Personal_repos -y
 dnf install yandex-disk-indicator -y
@@ -175,7 +174,7 @@ dnf install yandex-disk-indicator -y
 dnf -y install https://extras.getpagespeed.com/release-latest.rpm
 dnf -y yum-utils
 yum-config-manager --enable getpagespeed-extras-varnish60
-=======
+
 # Install Extension Manager
 #https://beta.flathub.org/ru/apps/details/com.mattjakeman.ExtensionManager
->>>>>>> origin/main
+ 
