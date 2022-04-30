@@ -178,3 +178,19 @@ yum-config-manager --enable getpagespeed-extras-varnish60
 # Install Extension Manager
 #https://beta.flathub.org/ru/apps/details/com.mattjakeman.ExtensionManager
  
+dnf install -y lsb-core-noarch
+#https://cryptopro.ru/products/csp/downloads#latest_csp50r2_linux
+wget https://cryptopro.ru/sites/default/files/private/csp/50/12000/linux-amd64.tgz
+tar -xf linux-amd64.tgz -C /tmp
+sudo /tmp/linux-amd64/install.sh cprocsp-rdr-gui-gtk
+#https://www.cryptopro.ru/download?pid=302
+wget https://www.cryptopro.ru/sites/default/files/products/cades/current_release_2_0/cades-linux-amd64.tar.gz
+
+sudo tar -xf cades-linux-amd64.tar.gz -C /tmp
+sudo rpm -i /tmp/cprocsp-pki-cades-64-2.0.14530-1.amd64.rpm 
+
+wget -qO - http://packages.lab50.net/okular/install | sudo /bin/sh
+
+
+
+
