@@ -198,3 +198,7 @@ dnf install ShellCheck -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 flatpak install -y flathub com.jetbrains.PhpStorm
+
+#Far file commander
+dnf copr enable polter/far2l -y
+dnf install far2l -y
