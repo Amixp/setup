@@ -191,6 +191,10 @@ sudo rpm -i /tmp/cprocsp-pki-cades-64-2.0.14530-1.amd64.rpm
 
 wget -qO - http://packages.lab50.net/okular/install | sudo /bin/sh
 
+#https://flathub.org/apps/details/com.jetbrains.PhpStorm
 
+dnf install ShellCheck -y
 
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+flatpak install -y flathub com.jetbrains.PhpStorm
