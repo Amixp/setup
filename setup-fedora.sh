@@ -218,3 +218,9 @@ enabled_metadata=1
 EOF
 
 dnf install firefox firefox-wayland profile-cleaner icecat -y
+
+# Для простой и эффективной работы со смартфоном на базе ОС Android
+dnf install kde-connect -y
+# установим клиент KDE Connect на смартфон:
+#Google Play;
+#F-Droid
