@@ -1,3 +1,15 @@
+tee  /etc/dnf/dnf.conf << "EOF"
+[main]
+gpgcheck=1
+installonly_limit=3
+clean_requirements_on_remove=True
+best=False
+skip_if_unavailable=True
+fastestmirror=True
+max_parallel_downloads=10
+defaultyes=True
+EOF
+
 dnf install inxi wget nano htop neofetch -y
 rpm --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
 rpm --import https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key
@@ -122,7 +134,7 @@ dnf install pycharm-community thunderbird -y
 dnf config-manager --set-enabled google-chrome
 dnf install google-chrome-stable -y
 
-wget https://cache-ams06.cdn.yandex.net/download.cdn.yandex.net/browser/yandex/ru/beta/Yandex.rpm
+wget https://cache-ams06.cdn.yandex.net/download.cdn.yandex.net/browser/yandex/ru/stable/Yandex.rpm
 dnf install Yandex.rpm -y
 
 dnf install qt5-designer python3-tkinter -y
@@ -130,13 +142,7 @@ echo "[daemon]
 WaylandEnable=false
 DefaultSession=gnome-xorg.desktop"
 
-vim /etc/gdm/custom.conf
-
-echo "fastestmirror=True
-max_parallel_downloads=10
-defaultyes=True"
-
-vim /etc/dnf/dnf.conf
+#vim /etc/gdm/custom.conf
 
 flatpak install -y app/md.obsidian.Obsidian
 
@@ -197,7 +203,7 @@ dnf install ShellCheck -y
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-flatpak install -y flathub com.jetbrains.PhpStorm
+#flatpak install -y flathub com.jetbrains.PhpStorm Install from Toolbox
 
 dnf install hw-probe -y
 hw-probe -generate-inventory -email admin@radv.ru > $HOME/.hw-probe-id
