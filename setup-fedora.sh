@@ -198,3 +198,16 @@ dnf install ShellCheck -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 flatpak install -y flathub com.jetbrains.PhpStorm
+
+dnf install hw-probe -y
+hw-probe -generate-inventory -email admin@radv.ru > $HOME/.hw-probe-id
+cat $HOME/.hw-probe-id | awk '{print $3}'
+sudo -E hw-probe -all -upload -i $(cat $HOME/.hw-probe-id | awk '{print $3}')
+## https://linux-hardware.org/?view=inventory
+
+
+flatpak install org.gmusicbrowser.gmusicbrowser -y
+flatpak install org.midori_browser.Midori -y
+flatpak install com.brave.Browser -y
+flatpak install -y flathub org.mozilla.firefox
+flatpak install com.github.Eloston.UngoogledChromium -y
