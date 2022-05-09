@@ -211,3 +211,29 @@ flatpak install org.midori_browser.Midori -y
 flatpak install com.brave.Browser -y
 flatpak install -y flathub org.mozilla.firefox
 flatpak install com.github.Eloston.UngoogledChromium -y
+
+#Far file commander
+dnf copr enable polter/far2l -y
+dnf install far2l -y
+
+tee  /etc/yum.repos.d/copr.firefox-esr.repo << "EOF"
+[copr:copr.fedorainfracloud.org:beno:firefox-esr]
+name=Copr repo for firefox-esr owned by beno
+baseurl=https://download.copr.fedorainfracloud.org/results/beno/firefox-esr/fedora-34-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/beno/firefox-esr/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+EOF
+
+dnf install firefox firefox-wayland profile-cleaner icecat -y
+
+# Для простой и эффективной работы со смартфоном на базе ОС Android
+dnf install kde-connect -y
+# установим клиент KDE Connect на смартфон:
+#Google Play;
+#F-Droid
+
